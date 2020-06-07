@@ -1,19 +1,27 @@
 <h2 align="center">NAT Mode</h2>
-<h3>Set up</h3>
-<p>Spin up 2 Ubuntu-18.04 nodes</p>
+
+### Set up
+Spin up 2 Ubuntu-18.04 nodes defined in the Vagrantfile.
 ```bash
 vagrant up
 ```
-<p>Make sure that they are running</p>
+Make sure that they are running
 ```bash
 vagrant global-status
 ```
-<h3>Experiment</h3>
-Ping your host machine (192.168.1.6 is my host machine's internal IP address)
+### Points to take note
+:point_right: Inside your VMs, You can **access both your host machine and external networks**.
+Ping your host machine (192.168.1.6 is my host machine's internal IP address).
 ```bash
-ping 192.168.1.6
+vagrant@node-1:~$ ping -c 2 192.168.1.6
+PING 192.168.1.6 (192.168.1.6) 56(84) bytes of data.
+64 bytes from 192.168.1.6: icmp_seq=1 ttl=63 time=0.364 ms
+64 bytes from 192.168.1.6: icmp_seq=2 ttl=63 time=0.674 ms
 ```
-Ping to an external host (Google came first to my mind)
+Ping to an external host (Google came first to my mind).
 ```bash
-ping 8.8.8.8
+vagrant@node-1:~$ ping -c 2 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=65.2 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=59.1 ms
 ```
