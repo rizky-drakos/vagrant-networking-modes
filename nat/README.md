@@ -29,6 +29,6 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 ```
 :point_right: Either your **host machine, or external hosts cannot access these VMs**.
 > Note: The reason that we are able to SSH into these VMs from our host machines is because Vagrant maps 
-port 22 on VMs to port 2200 of the host machine.
+port 22 on VMs to port 2200/2222 - check the log when creating VMs for details - of the host machine.
 
 :point_right: And different **VMs cannot access each other** when NAT is activated for each one.
