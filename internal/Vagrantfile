@@ -1,0 +1,22 @@
+#################################################
+#
+# This Vagrantfile helps to create 2 Ubuntu-18.04
+# VMs with the internal network, NAT is always 
+# added by default.
+#
+#################################################
+Vagrant.configure("2") do |config|
+    (1..2).each do |i|
+        config.vm.define "node-#{i}" do |node|
+            node.vm.provider "virtualbox" do |v|
+                v.memory = 512
+                v.cpus = 1
+            end
+            node.vm.box = "bento/ubuntu-18.04"
+            node.vm.hostname = "node-#{i}"
+            node.vm.network "private_network",
+                ip: "10.0.0.#{10 + i}",
+                virtualbox__intnet: true
+        end
+    end
+end

@@ -3,11 +3,13 @@
 By default **NAT is automatically added** when we use Vagrant to create VMs.
 
 ### Set up
+*Goal:* Create two VMs, in that each connects to a NAT network.
+*Steps:* 
 Spin up 2 Ubuntu-18.04 nodes defined in the Vagrantfile.
 ```bash
 vagrant up
 ```
-Make sure that they are running
+Make sure that they are running.
 ```bash
 vagrant global-status
 ```
