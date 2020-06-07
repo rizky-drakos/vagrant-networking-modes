@@ -24,3 +24,6 @@ vagrant@node-1:~$ ping -c 2 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=65.2 ms
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=59.1 ms
+```
+:point_right: Either your host machine, or external hosts cannot access these VMs.
+:point_right: And different VMs cannot access each other when NAT is activated for each one.
