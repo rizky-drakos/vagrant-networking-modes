@@ -1,0 +1,20 @@
+#################################################
+#
+# This Vagrantfile helps to create 2 Ubuntu-18.04
+# VMs with the bridged network.
+#
+#################################################
+Vagrant.configure("2") do |config|
+    (1..2).each do |i|
+        config.vm.define "node-#{i}" do |node|
+            node.vm.provider "virtualbox" do |v|
+                v.memory = 512
+                v.cpus = 1
+            end
+            node.vm.box = "bento/ubuntu-18.04"
+            node.vm.hostname = "node-#{i}"
+            # replace enp6s0 with your physical network interface.
+            node.vm.network "public_network", ip: "192.168.1.#{10+i}", bridge: "enp6s0"
+        end
+    end
+end
