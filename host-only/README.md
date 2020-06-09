@@ -27,8 +27,8 @@ Repeat these steps for node-2
 At this point, your VMs are fully connected to a host-only network.
 
 ### Points to take note
-:point_right: In a host-only network, you can see your local host machine together with all VMs 
-as a group. With that being said, they can ping each other.
+:point_right: In a host-only network, you can **see your local host machine together with all VMs 
+as a group**. With that being said, they can ping each other.
 * Ping your host machine (**192.168.1.6** is my host machine's internal IP address).
 ```bash
 vagrant@node-1:~$ ping -c 2 192.168.1.6
@@ -43,4 +43,4 @@ PING 10.0.0.11 (10.0.0.11) 56(84) bytes of data.
 64 bytes from 10.0.0.11: icmp_seq=1 ttl=64 time=0.385 ms
 64 bytes from 10.0.0.11: icmp_seq=2 ttl=64 time=0.485 ms
 ```
-:point_right: Nonetheless VMs cannot access external hosts, and vice versa.
+:point_right: Nonetheless VMs **cannot access external hosts, and vice versa**.
