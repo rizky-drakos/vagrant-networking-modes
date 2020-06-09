@@ -21,7 +21,7 @@ running *vagrant ssh <node-name>*. The reason is that we need to remove their NA
 your console will get hung when vagrant performs SSH via the ANT. And by default *vagrant* 
 is the default password.
 ```bash
-ssh vagrant@"192.168.1.11
+ssh vagrant@192.168.1.11
 ```
 Remove its NAT, which is eth0 by default.
 ```bash
