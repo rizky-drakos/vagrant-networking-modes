@@ -1,6 +1,6 @@
 <h3 align="center">A good example shows this best</h3>
 
-Speaking of VirtualBox networking modes there are 8 of them, but we will be only focusing on 
+Speaking of **VirtualBox networking modes** there are 8 of them, but we will be only focusing on 
   <a href="https://github.com/rizky-drakos/vagrant-networking-modes/tree/master/nat">NAT</a>, 
   <a href="https://github.com/rizky-drakos/vagrant-networking-modes/tree/master/bridged">Bridged networking</a>, 
   <a href="https://github.com/rizky-drakos/vagrant-networking-modes/tree/master/internal">Internal networking</a> and 
